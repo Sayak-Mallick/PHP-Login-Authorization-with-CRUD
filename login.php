@@ -26,7 +26,7 @@
 
             $row = mysqli_fetch_assoc($result);
 
-            if (is_array($row) && !empty($row)) {
+            if ($row > 0) {
                 $validuser = $row['username'];
                 $_SESSION['valid'] = $validuser;
                 $_SESSION['name'] = $row['name'];
